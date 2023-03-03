@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formularz</title>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h2>Sprawdź cenę swojej wizyty</h2>
+
+		<label for="piling">Piling</label>
+		<input type="checkbox" id="pilling" />
+		<br />
+
+		<label for="maska">Maska</label>
+		<input type="checkbox" id="maska" />
+		<br />
+
+		<label for="masaz">Masaz</label>
+		<input type="checkbox" id="masaz" />
+		<br />
+
+		<label for="regulacja">Regulacja</label>
+		<input type="checkbox" id="regulacja" />
+		<br />
+
+		<input type="submit" onclick="sprawdz()" value="Sprawdź cenę" />
+		<br />
+
+		<div id="wynik"></div>
+	</body>
+</html>
