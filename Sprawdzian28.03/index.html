@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formularz</title>
+		<!-- Pamietaj zeby sie polaczyc ze swoim skryptem -->
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h2>Sprawdź cenę swojej wizyty</h2>
+
+		<!-- Standardowy formularz w HTMLu, trzeba pamietac ze w JSie operujemy na ID nie na name jak w PHP -->
+		<!-- Wazna inna rzecz to ze  nie dodajemy tutaj <form>, sprawia to czesto bugi idk dlaczego -->
+		<label for="piling">Piling</label>
+		<input type="checkbox" id="pilling" />
+		<br />
+
+		<label for="maska">Maska</label>
+		<input type="checkbox" id="maska" />
+		<br />
+
+		<label for="masaz">Masaz</label>
+		<input type="checkbox" id="masaz" />
+		<br />
+
+		<label for="regulacja">Regulacja</label>
+		<input type="checkbox" id="regulacja" />
+		<br />
+
+		<!-- Standardowo na buttonie onclick z nazwa funkcji z JS -->
+		<input type="submit" onclick="sprawdz()" value="Sprawdź cenę" />
+		<br />
+
+		<!-- Miejsce w ktorym dodamy nasz wynik z JS -->
+		<div id="wynik"></div>
+	</body>
+</html>
