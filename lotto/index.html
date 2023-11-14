@@ -13,47 +13,54 @@
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
-		<div class="header">
-			<h1>Losowanie Lotto</h1>
-		</div>
-		<div class="main">
-			<div class="choice">
-				<h2>Wybierz swoje liczby</h2>
-				<form action="">
-					<div class="choice__number">
-						<label for="">Pierwsza liczba</label>
-						<input type="number" class="first-number" min="1" max="49" />
-					</div>
-					<div class="choice__number">
-						<label for="">Druga liczba</label>
-						<input type="number" class="second-number" min="1" max="49" />
-					</div>
-					<div class="choice__number">
-						<label for="">Trzecia liczba</label>
-						<input type="number" class="third-number" min="1" max="49" />
-					</div>
-					<div class="choice__number">
-						<label for="">Czwarta liczba</label>
-						<input type="number" class="fourth-number" min="1" max="49" />
-					</div>
-					<div class="choice__number">
-						<label for="">Piąta liczba</label>
-						<input type="number" class="fifth-number" min="1" max="49" />
-					</div>
-					<div class="choice__number">
-						<label for="">Szósta liczba</label>
-						<input type="number" class="sixth-number" min="1" max="49" />
-					</div>
-					<input type="submit" value="Wylosuj" />
-				</form>
+		<div class="wrapper">
+			<div class="header">
+				<h1 class="header__heading">Losowanie Lotto</h1>
 			</div>
-			<div class="result result-hidden">
-				<h2 class="result__header">Wyniki:</h2>
-				<p class="result__element result__user-numbers">Twoje liczby:</p>
-				<p class="result__element result__random-numbers">Wylosowane liczby:</p>
-				<p class="result__element result__matched-numbers">Pasujące liczby:</p>
+			<div class="main">
+				<div class="choice">
+					<h2 class="choice__heading">Wybierz swoje liczby</h2>
+					<form action="">
+						<div class="choice__number">
+							<label for="">Pierwsza liczba</label>
+							<input type="number" class="first-number" min="1" max="49" />
+						</div>
+						<div class="choice__number">
+							<label for="">Druga liczba</label>
+							<input type="number" class="second-number" min="1" max="49" />
+						</div>
+						<div class="choice__number">
+							<label for="">Trzecia liczba</label>
+							<input type="number" class="third-number" min="1" max="49" />
+						</div>
+						<div class="choice__number">
+							<label for="">Czwarta liczba</label>
+							<input type="number" class="fourth-number" min="1" max="49" />
+						</div>
+						<div class="choice__number">
+							<label for="">Piąta liczba</label>
+							<input type="number" class="fifth-number" min="1" max="49" />
+						</div>
+						<div class="choice__number">
+							<label for="">Szósta liczba</label>
+							<input type="number" class="sixth-number" min="1" max="49" />
+						</div>
+						<input type="submit" value="Wylosuj" />
+					</form>
+				</div>
+				<div class="result result-hidden">
+					<h2 class="result__header">Wyniki:</h2>
+					<p class="result__element result__user-numbers">Twoje liczby:</p>
+					<p class="result__element result__random-numbers">
+						Wylosowane liczby:
+					</p>
+					<p class="result__element result__matched-numbers">
+						Pasujące liczby:
+					</p>
+				</div>
 			</div>
 		</div>
+
 		<script src="./js/main.js"></script>
 	</body>
 </html>

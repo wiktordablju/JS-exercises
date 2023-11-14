@@ -3,7 +3,6 @@ const resultUserNumbers = document.querySelector(".result__user-numbers")
 const resultRandomNumbers = document.querySelector(".result__random-numbers")
 const resultMatchedNumbers = document.querySelector(".result__matched-numbers")
 const result = document.querySelector(".result")
-Numbers = document.querySelector(".result__user-numbers")
 
 let userNumbers = []
 let randomNumbers = []
@@ -12,23 +11,30 @@ let matchedNumbers = []
 // function e czyli jakakolwiek akcja na submitcie, prevent default zeby sie strona nie resetowala
 form.addEventListener("submit", function (e) {
 	e.preventDefault()
+
+	const userNumbers = [
+		Number(document.querySelector(".first-number").value),
+		Number(document.querySelector(".second-number").value),
+		Number(document.querySelector(".third-number").value),
+		Number(document.querySelector(".fourth-number").value),
+		Number(document.querySelector(".fifth-number").value),
+		Number(document.querySelector(".sixth-number").value),
+	]
+
+	let checkedNumbers = []
+
+	for (let i = 0; i < userNumbers.length; i++) {
+		if (checkedNumbers.includes(userNumbers[i])) {
+			alert(
+				"Podałeś dwie te same liczby lub nie podałeś wszystkich, musisz podać sześć unikalnych liczb by przystąpić do losowania."
+			)
+			return
+		}
+		checkedNumbers.push(userNumbers[i])
+	}
+
 	result.classList.remove("result-hidden")
 
-	const firstNumber = Number(document.querySelector(".first-number").value)
-	const secondNumber = Number(document.querySelector(".second-number").value)
-	const thirdNumber = Number(document.querySelector(".third-number").value)
-	const fourthNumber = Number(document.querySelector(".fourth-number").value)
-	const fifthNumber = Number(document.querySelector(".fifth-number").value)
-	const sixthNumber = Number(document.querySelector(".sixth-number").value)
-
-	userNumbers = [
-		firstNumber,
-		secondNumber,
-		thirdNumber,
-		fourthNumber,
-		fifthNumber,
-		sixthNumber,
-	]
 	resultUserNumbers.innerHTML = `Twoje liczby to: ${userNumbers}`
 
 	while (randomNumbers.length < 6) {
@@ -46,6 +52,7 @@ form.addEventListener("submit", function (e) {
 			matchedNumbers.push(userNumbers[i])
 		}
 	}
+
 	if (matchedNumbers.length === 0) {
 		resultMatchedNumbers.innerHTML = `Nie trafiłeś żadnej liczby`
 	} else if (matchedNumbers.length === 1) {
